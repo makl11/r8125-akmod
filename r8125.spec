@@ -6,7 +6,7 @@
 
 Name:           %{modname}
 Version:        9.016.01
-Release:        2%{?dist}
+Release:        3%{?dist}
 Vendor:         Realtek
 Summary:        Realtek %{modname} 2.5GbE PCIE Kernel Driver
 Group:          System Environment/Kernel
@@ -34,10 +34,12 @@ RTL8125BP / RTL8125CP
 head -n32 Makefile | cat - %{SOURCE1} > LICENSE
 
 %install
+mkdir -p %{buildroot}%{_prefix}/lib/modprobe.d/
 install -p -m 0644 %{SOURCE2} %{buildroot}%{_prefix}/lib/modprobe.d/%{modname}.conf
 
 %files
 %doc README
 %license LICENSE
+%{_prefix}/lib/modprobe.d/%{modname}.conf
 
 %changelog

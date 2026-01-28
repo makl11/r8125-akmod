@@ -1,4 +1,6 @@
 %global modname r8125
+%global _modprobe_d %{_prefix}/lib/modprobe.d/
+%global _sysconf_modprobe_d %{_sysconfdir}/modprobe.d/
 
 %if 0%{?fedora}
 %global debug_package %{nil}
@@ -35,14 +37,15 @@ RTL8125BP / RTL8125CP
 head -n32 Makefile | cat - %{SOURCE1} > LICENSE
 
 %install
-mkdir -p %{buildroot}%{_prefix}/lib/modprobe.d/
-install -p -m 0644 %{SOURCE2} %{buildroot}%{_prefix}/lib/modprobe.d/%{modname}.conf
+install -p -m 0755 -d %{buildroot}%{_modprobe_d}/
+install -p -m 0644 %{SOURCE2} %{buildroot}%{_modprobe_d}%{modname}.conf
 
 %files
 %defattr(644, root, root, 755)
 %doc README
 %license LICENSE
-%{_prefix}/lib/modprobe.d/%{modname}.conf
+%{_modprobe_d}%{modname}.conf
+%ghost %{_sysconf_modprobe_d}%{modname}.conf
 
 %changelog
 %autochangelog

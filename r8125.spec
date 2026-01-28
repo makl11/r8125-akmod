@@ -16,6 +16,8 @@ Source0:        %{modname}-%{version}.tar.bz2
 Source1:        LICENSE
 Source2:        modprobe.conf
 
+BuildArch:      noarch
+
 Provides: %{name}-kmod-common = %{version}
 Requires: %{name}-kmod >= %{version}
 

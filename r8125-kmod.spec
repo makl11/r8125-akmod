@@ -6,8 +6,7 @@
 
 Name:           %{modname}-kmod
 Version:        9.016.01
-Release:        1%{?dist}
-Vendor:         Realtek
+Release:        %autorelease
 Summary:        Realtek %{modname} 2.5GbE PCIE Kernel Driver
 Group:          System Environment/Kernel
 License:        GPL-2.0-only
@@ -55,3 +54,4 @@ done
 %{?akmod_install}
 
 %changelog
+%autochangelog

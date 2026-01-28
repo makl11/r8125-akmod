@@ -6,8 +6,7 @@
 
 Name:           %{modname}
 Version:        9.016.01
-Release:        3%{?dist}
-Vendor:         Realtek
+Release:        %autorelease
 Summary:        Realtek %{modname} 2.5GbE PCIE Kernel Driver
 Group:          System Environment/Kernel
 License:        GPL-2.0-only
@@ -43,3 +42,4 @@ install -p -m 0644 %{SOURCE2} %{buildroot}%{_prefix}/lib/modprobe.d/%{modname}.c
 %{_prefix}/lib/modprobe.d/%{modname}.conf
 
 %changelog
+%autochangelog

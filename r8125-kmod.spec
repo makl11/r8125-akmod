@@ -12,6 +12,8 @@ Group:          System Environment/Kernel
 License:        GPL-2.0-only
 URL:            https://www.realtek.com/Download/List?cate_id=584#:~:text=2%2E5G%20Ethernet%20LINUX%20driver%20r8125
 BugURL:         https://github.com/makl11/r8125-akmod/issues
+# Realtek protects the download using a captcha
+# https://www.realtek.com/Download/ToDownload?type=direct&downloadid=3763
 Source0:        %{modname}-%{version}.tar.bz2
 
 BuildRequires:  kmodtool make gcc sed gawk

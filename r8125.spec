@@ -32,9 +32,7 @@ RTL8125BP / RTL8125CP
 
 %prep
 %autosetup -C
-
-%build
-head -n32 Makefile | cat - %{SOURCE1} > LICENSE
+%{__cp} -v %{SOURCE1} LICENSE
 
 %install
 install -p -m 0755 -d %{buildroot}%{_modprobe_d}/

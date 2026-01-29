@@ -22,7 +22,9 @@ BuildRequires:  kmodtool make gcc sed gawk
 %{expand:%(kmodtool --target %{_target_cpu} --kmodname %{name} %{?buildforkernels:--%{buildforkernels}} %{?kernels:--for-kernels "%{?kernels}"} 2>/dev/null) }
 
 %description
-r8125 Kernel Driver for Realtek 2.5 Gigabit Ethernet PCI Express Network Interface Controllers
+r8125 Kernel Driver for Realtek 2.5 Gigabit Ethernet PCI Express
+Network Interface Controllers
+
 RTL8125 / RTL8125B(G) / RTL8125D / RTL8125K
 RTL8125BP / RTL8125CP
 

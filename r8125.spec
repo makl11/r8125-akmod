@@ -26,7 +26,9 @@ Requires:       %{name}-kmod >= %{version}
 BuildRequires:  systemd-rpm-macros
 
 %description
-r8125 Kernel Driver for Realtek 2.5 Gigabit Ethernet PCI Express Network Interface Controllers
+r8125 Kernel Driver for Realtek 2.5 Gigabit Ethernet PCI Express
+Network Interface Controllers
+
 RTL8125 / RTL8125B(G) / RTL8125D / RTL8125K
 RTL8125BP / RTL8125CP
 
